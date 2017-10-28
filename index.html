@@ -17,22 +17,44 @@ td, th {
 tr:nth-child (even) {
  background-color: #ddddddd;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
  </head>
- </style>
 <body>
-
-<p><a href="pakkumised.html">pakkumised</a></p>
-<p><a href="firmale.html">firmale</a></p>
-<p><a href="praktikandile.html">praktikandile</a></p>
-<p><a href="liitu.html">liitu</a></p>
-
+<ul>
+<li><a href="pakkumised.html">pakkumised</a></li>
+<li><a href="firmale.html">firmale</a></li>
+<li><a href="praktikandile.html">praktikandile</a></li>
+<li><a href="liitu.html">liitu</a></li>
+</ul>
 
 <h1>Seniorship</h1>
 
 
 
 <h2>Kuidas see toimib?</h2>
- <ul>
  <table>
  <tr>
   <th>Leia praktika</th>
@@ -49,16 +71,18 @@ tr:nth-child (even) {
  </table>
   <p> Sisestage märksõna, et otsida praktikapakkumisi või sirvige kõiki allpool olevaid pakkumisi. </p>
   <form>
-    <input type="text" name="Otsinguriba"><br>
+    <textarea rows="3" cols="50" name="Otsinguriba">
+    </textarea><br>
+       <input type="submit" value="Otsi">
   </form>
 
-<ul>
-  <li>Pealkiri</li>
-  <li>Praktika pikkus</li>
-  <li>Alguskuupäev</li>
-  <li>Tasu</li>
-  <li>Loe edasi</li>
-</ul>
+<ol>
+  <li>Pealkiri</li><br>
+  <li>Praktika pikkus</li><br>
+  <li>Alguskuupäev</li><br>
+  <li>Tasu</li><br>
+  <li>Loe edasi</li><br>
+</ol>
 
 </body>
 </html>
