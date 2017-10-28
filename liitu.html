@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Vanaematöö</title>
+</head>
+<body>
+
+  <?php
+  // define variables and set to empty values
+  function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+  ?>
+
+<h1>Vanaematöö</h1>
+<h2>Taiplik käsi, üüt kogemus</h2>
+<form action="/action_page.php">
+  Nimi:<br>
+  <input type="text" name="firma_nimi">
+  <br>
+  Asukoht:<br>
+  <input type="text" name="firma_asukoht">
+  <br>
+  Valdkond:<br>
+  <input type="text" name="firma_valkond">
+  <br>
+  Veebileht:<br>
+  <input type="text" name="firma_veebileht">
+  <br>
+  Telefon:<br>
+  <input type="text" name="firma_telefon">
+  <br>
+  Meiliaddressil:<br>
+  <input type="text" name="firma_meiliaadress">
+  <br>
+  Vilumus nõuanda:<br>
+  <select name="nouanda" size="4" multiple>
+    <option value="programmeerija">programmeerija</option>
+    <option value="aednik">aednik</option>
+    <option value="raamatupidaja">raamatupidaja</option>
+    <option value="autojuht">autojuht</option>
+    <option value="elektroonika">elektroonika</option>
+  </select>
+  <br>
+  Keel nõuanda:<br>
+  <select name="keel" size="4" multiple>
+    <option value="Eesti">Eesti</option>
+    <option value="Vene">Vene</option>
+    <option value="Inglise">Inglise</option>
+    <option value="Soome">Soome</option>
+    <option value="Lati">Lati</option>
+    <option value="Leedu">Leedu</option>
+    <option value="Hiina">Hiina</option>
+    <option value="Saksa">Saksa</option>
+    <option value="Prantsuse">Prantsuse</option>
+    <option value="Poola">Poola</option>
+    <option value="muu">Muu</option>
+  </select>
+  <br>
+  Kaugtöö:<br>
+  <input type="radio" name="kaugtoo" value="Jah"> Jah
+  <input type="radio" name="kaugtoo" value="Ei"> Ei
+  <input type="radio" name="voibolla" value="voibolla"> Võib-olla
+  <br>
+  Vilumus õpetama:<br>
+  <select name="opetama" size="4" multiple>
+    <option value="programmeerija">programmeerija</option>
+    <option value="aednik">aednik</option>
+    <option value="raamatupidaja">raamatupidaja</option>
+    <option value="autojuht">autojuht</option>
+    <option value="elektroonika">elektroonika</option>
+  </select>
+  <br>
+  <input type="submit" value="Alutama">
+  </form>
+<p><a href="index.html">kodu</a></p>
+</body>
+</html>
