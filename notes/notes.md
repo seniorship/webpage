@@ -2,7 +2,7 @@
 ## Leia praktika (find internship)
 *	Vali meie pakkumiste hulgast praktika, mis Sinus huvi äratab
 ## Kandideeri (apply)
-## Esita oma kandidatuur kõigest mõne minutiga. Sobivuse korral võtab tööpakkuja Sinuga ühendust.
+* Esita oma kandidatuur kõigest mõne minutiga. Sobivuse korral võtab tööpakkuja Sinuga ühendust.
 ## Tööta (work)
 *	Alusta oma uut ja huvitavat praktikat
 ## Saa tasustatud (get paid)
