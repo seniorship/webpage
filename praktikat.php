@@ -10,15 +10,15 @@
 <p><a href="firmale.html">firmale</a></p>
 <p><a href="praktikandile.html">praktikandile</a></p>
 <p><a href="liitu.html">liitu</a></p>
- 
+
 <h1>Tere tulemast!</h1>
-<p> Registreerumiseks täidke palun ära järgnevad väljad enda kontaktinfo, töökogemuste ja hariduskäigu kohta. 
+<p> Registreerumiseks täidke palun ära järgnevad väljad enda kontaktinfo, töökogemuste ja hariduskäigu kohta.
 Hoiame Teie informatisooni täielikult konfidentsiaalsena ja jagame seda praktikapakkujaga ainult siis, kui Sa oma kandidatuuri ise esitad.</p>
 
 <p>Väljade täitmine võtab umbes 10 minutit. Et praktikapakkujale võimalikult head muljet jätta, möelge kõik vastused põhjalikult läbi. Vastamise lihtustamiseks on küsimuse kõrval hallis kirjas näide sobilikust vastusest.</p>
 
 <h2>Kontaktinfo</h2>
-<form action="/action_page.php">
+<form id="kontakt" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   Nimi:<br>
   <input type="text" name="nimi">
   <br>
@@ -82,7 +82,7 @@ Hoiame Teie informatisooni täielikult konfidentsiaalsena ja jagame seda praktik
   <input type="text" name="Ametikoha nimi">
 <br>
    Ajavahemik aastast:<br>
-  <input type="text" name="Ajavahemik aastast"> 
+  <input type="text" name="Ajavahemik aastast">
   Kuni aastani:
   <input type="text" name="Kuni aastani"> <br>
   Asukoht:<br>
@@ -98,6 +98,67 @@ Hoiame Teie informatisooni täielikult konfidentsiaalsena ja jagame seda praktik
   <input type="submit" name="formsubmit" value="Registreeru"/>
   </form>
 
+
+  <script>
+   document.getElementById("kontakt").onsubmit = function()
+   {myFunction()};
+  </script>
+
+  <?php
+  // create table if needed
+   $servername = "localhost";
+   $username = "dbuser";
+   $password = "dbpasswd";
+   $dbname = "praktikant";
+  try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      // set the PDO error mode to exception
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      echo "Connected successfully <br>";
+      $conn = null;
+      }
+  catch(PDOException $e)
+      {
+      echo "Connection failed: " . $e->getMessage();
+      }
+  // Create table
+  try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      // set the PDO error mode to exception
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      // sql to create table of interns
+      $sql = "CREATE TABLE IF NOT EXISTS interns (
+      id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(30) NOT NULL,
+      elukoht VARCHAR(30) NOT NULL,
+      linn VARCHAR(30) NOT NULL,
+      telefoninumber INT(30) NOT NULL,
+
+      ametikoha VARCHAR(30) NOT NULL,
+      ajavahemik VARCHAR(30) NOT NULL,
+      kuniaastani VARCHAR(30) NOT NULL,
+      asukoht VARCHAR(30) NOT NULL,
+      message VARCHAR(500) NOT NULL,
+      comment VARCHAR(500) NOT NULL,
+      reg_date TIMESTAMP
+      )";
+      // use exec() because no results are returned
+      $conn->exec($sql);
+      echo "intern table created <br>";
+      $sql = $conn->prepare("INSERT INTO interns (name) VALUES ( '" . $name . "')");
+      $sql->execute();
+      $id = $conn->lastInsertId();
+      echo "Username entered in table successfully and user id is " $id "". "<br>";
+      $conn = null;
+      // return to main page
+      header("Location:http://ip.address/index.php");
+      }
+  catch(PDOException $e)
+      {
+      echo $sql . "<br>" . $e->getMessage();
+      }
+  }
+  ?>
+
 </body>
 </html>
-  
