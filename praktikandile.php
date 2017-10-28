@@ -5,10 +5,10 @@
 <title>Vanaematöö</title>
 </head>
 <body>
-  <p><a href="pakkumised.html">pakkumised</a></p>
-  <p><a href="firmale.html">firmale</a></p>
-  <p><a href="praktikandile.html">praktikandile</a></p>
-  <p><a href="liitu.html">liitu</a></p>
+  <p><a href="pakkumised.php">pakkumised</a></p>
+  <p><a href="firmale.php">firmale</a></p>
+  <p><a href="praktikandile.php">praktikandile</a></p>
+  <p><a href="liitu.php">liitu</a></p>
 
 <h1>Praktikandile</h1>
 
