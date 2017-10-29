@@ -31,7 +31,7 @@
 <li><a href="praktikandile.php">Praktikandile</a></li>
 <li><a href="firmale.php">Firmale</a></li>
 <li><a href="index.php">Pakkumised</a></li>
-<li style="float:left"><a href="index.php"> <img src="logo.png" alt="Seniorship" style="height:100px;"></a></li>
+<li style="float:left"><a href="index.php"> <img src="logo.png" alt="Seniorship" style="height:50px; padding-top:1px;"></a></li>
 </ul>
 
  <h1>Kuidas see toimib?</h1>
@@ -48,20 +48,16 @@
     </th>
  </tr>
  <tr>
-<<<<<<< HEAD
   <th><h3>LEIA PRAKTIKA</h3></th>
-=======
-  <th><h3>LEIA PRAKTIKA</h3> <div align="center" style="width:10px; height:2px;border:1px solid #000;"></div></th>
->>>>>>> d68974b664bf90ca1f74ee531e90cf72a93c5d12
    <th><h3>KANDIDEERI</h3></th>
    <th><h3>TÖÖTA</h3></th>
    <th><h3>TEENI RAHA</h3></th>
  </tr>
  <tr>
-  <th> <img src="ruba.png" alt="Ruba" style="height:20px;"></th>
-   <th> <img src="ruba.png" alt="Ruba" style="height:20px;"></th>
-   <th> <img src="ruba.png" alt="Ruba" style="height:20px;"></th>
-   <th> <img src="ruba.png" alt="Ruba" style="height:20px;"></th>
+  <th> <img src="ruba.png" alt="Ruba" style="height:20px; width:100px"></th>
+  <th> <img src="ruba.png" alt="Ruba" style="height:20px; width:100px"></th>
+  <th> <img src="ruba.png" alt="Ruba" style="height:20px; width:100px"></th>
+  <th> <img src="ruba.png" alt="Ruba" style="height:20px;width:100px"></th>
  </tr>
  <tr>
    <td>Vali meie pakkumiste</td>

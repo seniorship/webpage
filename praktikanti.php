@@ -21,14 +21,21 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
 </html>
 
 <h1>Tere tulemast!</h1>
+<p> Registreerumiseks täidke palun ära järgnevad väljad praktika kirjelduse, asukoha ja tasu kohta. </p>
+<p>Väljade täitmine võtab umbes 10 minutit. <p>
 
-<h2>Kontaktinfo</h2>
+<h2>Pakkumise kirjeldus</h2>
 <form action="/action_page.php">
-  Nimi:<br>
-  <input type="text" name="nimi">
+  Pealkiri:<br>
+  <input type="text" name="Pealkiri">
   <br>
-  Elukoht:<br>
-  <select name="elukoht" size="15">
+  Töötasu:<br>
+  <input type="text" name="Töötasu">
+  <br>
+  Praktika pikkus:<br>
+  <input type="text" name="Praktika pikkus"> <br>
+  Asukoht:<br>
+  <select name="Asukoht" size="15">
     <option value="Harjumaa">Harjumaa</option>
     <option value="Hiiumaa">Hiiumaa</option>
     <option value="Ida-Virumaa">Ida-Virumaa</option>
@@ -46,59 +53,6 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
     <option value="Viljandimaa">Viljandimaa</option>
     <option value="Võrumaa">Võrumaa</option>
   </select>
-  <br>
-   Linn/küla:<br>
-  <input type="text" name="linnkula">
-  <br>
-   Telefoninumber:<br>
-  <input type="text" name="telefoninumber">
-  <br>
-  <h2>Töökogemus</h2>
-  <p> Palun kirjeldage oma viimast töökogemust, et tööandjale enda kohta rohkem infot anda.</p>
-   <select name="valdkond" size="25">
-    <option value="Administratiivtöö">Administratiivtöö</option>
-    <option value="Ehitus / Kinnisvara">Ehitus / Kinnisvara</option>
-    <option value="Elektroonika / Side">Elektroonika / Side</option>
-    <option value="Energeetika / Elekter">Energeetika / Elekter</option>
-    <option value="Finants / Raamatupidamine">Finants / Raamatupidamine>
-    <option value="Haridus / Teadus">Haridus / Teadus</option>
-    <option value="IT / E-kaubandus">IT / E-kaubandus</option>
-    <option value="Juhtimine">Juhtimine</option>
-    <option value="Klienditeenindus">Klienditeenindus</option>
-    <option value="Koolitus / Personalitöö">Koolitus / Personalitöö</option>
-    <option value="Korrakaitse / Turva">Korrakaitse / Turva</option>
-    <option value="Kultuur / Meelelahutus">Kultuur / Meelelahutus</option>
-    <option value="Meedia">Meedia>
-    <option value="Merendus">Merendus</option>
-    <option value="Müük / Kaubandus">Müük / Kaubandus</option>
-    <option value="Põllumajandus">Põllumajandus</option>
-    <option value="Riigi- ja avalik haldus">Riigi- ja avalik haldus</option>
-    <option value="Sotsiaaltöö">Sotsiaaltöö</option>
-    <option value="Tehnika / Mehhaanika">Tehnika / Mehhaanika</option>
-    <option value="Tervishoid">Tervishoid</option>
-    <option value="Transport / Logistika">Transport / Logistika</option>
-    <option value="Turism / Hotellindus">Turism / Hotellindus </option>
-    <option value="Tööstus / Tootmine">Tööstus / Tootmine>
-    <option value="Vabatahtlik töö">Vabatahtlik töö</option>
-    <option value="Õigusteenused">Õigusteenused</option>
-  </select>
-  <br>
-   Ametikoha nimi:<br>
-  <input type="text" name="ametikohanimi">
-<br>
-   Ajavahemik aastast:<br>
-  <input type="text" name="ajavahemikaastast"><br>
-  Kuni aastani:<br>
-  <input type="text" name="kuniaastani"> <br>
-  Asukoht:<br>
-  <input type="text" name="asukoht">
-<br>
-<h2>Kirjutage endast lähemalt</h2>
-<p> Tutvustage end lühidalt. Võite kirjutada oma elukäigust, kogemustest, hobidest, tugevustest ja nõrkustest, eesmärkidest. </p>
- <input type="text">
-<br>
-<p> Missugusest praktikast olete huvitatud? </p>
- <input type="text">
 </br>
   <input type="submit" name="formsubmit" value="Registreeru"/>
   </form>
