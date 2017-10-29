@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title>Vanaematöö</title>
+<title>Seniorship</title>
 <link rel="stylesheet"
 type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -24,10 +24,11 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
   <li><a href="praktikandile.php">Praktikandile</a></li>
   <li><a href="firmale.php">Firmale</a></li>
   <li><a href="index.php">Pakkumised</a></li>
-  <li style="float:left">Seniorship</li>
+  <li style="float:left"><a href="index.php"> <img src="logo.png" alt="Seniorship" style="height:100px;"></a></li>
   </ul>
-  
+
   <h1>Ma otsin</h1>
-<p><a href="praktikat.html">Praktikat</a> <a href="praktikanti.html">Praktikanti</a></p>
+  <h2><a href="praktikat.php">Praktikat</a> &nbsp;&nbsp;<a href="praktikanti.php">Praktikanti</a></h2>
+  </ul>
 </body>
 </html>
