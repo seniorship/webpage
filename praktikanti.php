@@ -48,6 +48,28 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
       } else {
           $asukoht = test_input($_POST["asukoht"]);
       }
+      if (empty($_POST["ametikohanimi"])) {
+                $ametikohanimiErr = "Ametikoha nimi on vajalik";
+            } else {
+                $ametikohanimi = test_input($_POST["ametikohanimi"]);
+            }
+      if (empty($_POST["ajavahemikaastast"])) {
+                      $ajavahemikaastastErr = "Ajavahemik aastast nimi on vajalik";
+                  } else {
+                      $ajavahemikaastast = test_input($_POST["ajavahemikaastast"]);
+                  }
+      if (empty($_POST["kuniaastani"])) {
+                $kuniaastaniErr = "Kuni aastani nimi on vajalik";
+              } else {
+                $kuniaastani = test_input($_POST["kuniaastani"]);
+             }
+      if (empty($_POST["asukoht"])) {
+               $asukohtErr = "Asukoht nimi on vajalik";
+           } else {
+              $asukoht = test_input($_POST["asukoht"]);
+          }
+       $muu = test_input($_POST["muu"]);
+       $huvitavud = test_input($_POST["huvitavud"]);      
     }
 
     function test_input($data) {

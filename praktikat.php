@@ -22,8 +22,9 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
   // define variables and set to empty values
 
   $nimiErr = $elukohtErr = $linnkulaErr =  $telefoninumberErr = $valdkondErr = $ametikohanimiErr =  "";
+  $ajavahemikaastastErr = $kuniaastaniErr = $asukohtErr = $muuErr = $huvitavudErr = "";
   $nimi = $elukoht = $linnkula =  $telefoninumber = $valdkond = $ametikohanimi =  "";
-  
+  $ajavahemikaastast = $kuniaastani = $asukoht = $muu = $huvitavud = "";
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["nimi"])) {
       $nimiErr = "Nimi on vajalik";
@@ -45,19 +46,12 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
             } else {
                 $telefoninumber = test_input($_POST["telefoninumber"]);
             }
-
     if (empty($_POST["valdkond"])) {
               $valdkondErr = "Valdkond on vajalik";
           } else {
               $valdkond = test_input($_POST["valdkond"]);
           }
-
-    if (empty($_POST["ametikohanimi"])) {
-              $ametikohanimiErr = "Ametikoha nimi on vajalik";
-          } else {
-              $ametikohanimi = test_input($_POST["ametikohanimi"]);
-          }
-      }
+    }
 
   function test_input($data) {
     $data = trim($data);
@@ -84,8 +78,6 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
   <p> Vastamise lihtustamiseks on küsimuse kõrval hallis kirjas näide sobilikust vastusest.</p>
 
   <h2>Kontaktinfo</h2>
-
-
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     Nimi: <input type="text" name="nimi" value="<?php echo $nimi;?>">
     <span class="error">* <?php echo $nimiErr;?></span>
@@ -123,7 +115,7 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
       <option value="Ehitus / Kinnisvara">Ehitus / Kinnisvara</option>
       <option value="Elektroonika / Side">Elektroonika / Side</option>
       <option value="Energeetika / Elekter">Energeetika / Elekter</option>
-      <option value="Finants / Raamatupidamine">Finants / Raamatupidamine>
+      <option value="Finants / Raamatupidamine">Finants / Raamatupidamine</option>
       <option value="Haridus / Teadus">Haridus / Teadus</option>
       <option value="IT / E-kaubandus">IT / E-kaubandus</option>
       <option value="Juhtimine">Juhtimine</option>
@@ -131,7 +123,7 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
       <option value="Koolitus / Personalitöö">Koolitus / Personalitöö</option>
       <option value="Korrakaitse / Turva">Korrakaitse / Turva</option>
       <option value="Kultuur / Meelelahutus">Kultuur / Meelelahutus</option>
-      <option value="Meedia">Meedia>
+      <option value="Meedia">Meedia </option>
       <option value="Merendus">Merendus</option>
       <option value="Müük / Kaubandus">Müük / Kaubandus</option>
       <option value="Põllumajandus">Põllumajandus</option>
@@ -141,7 +133,7 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
       <option value="Tervishoid">Tervishoid</option>
       <option value="Transport / Logistika">Transport / Logistika</option>
       <option value="Turism / Hotellindus">Turism / Hotellindus </option>
-      <option value="Tööstus / Tootmine">Tööstus / Tootmine>
+      <option value="Tööstus / Tootmine">Tööstus / Tootmine> </option>
       <option value="Vabatahtlik töö">Vabatahtlik töö</option>
       <option value="Õigusteenused">Õigusteenused</option>
     </select>
@@ -149,23 +141,23 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
      Ametikoha nimi: <input type="text" name="ametikohanimi" value="<?php echo $ametikohanimi;?>">
      <span class="error">* <?php echo $ametikohanimiErr;?></span>
     <br><br>
-     Ajavahemik aastast: <input type="text" name="ajavahemikaastast" value="<?php echo $ajavahemikaastast;?>">
-     <span class="error">* <?php echo $ajavahemikaastastErr;?></span>
-     <br><br>
-     Kuni aastani: <input type="text" name="kuniaastani" value="<?php echo $kuniaastani;?>">
-     <span class="error">* <?php echo $kuniaastaniErr;?></span>
+    Ajavahemik aastast: <input type="text" name="ajavahemikaastast" value="<?php echo $ajavahemikaastast;?>">
+    <span class="error">* <?php echo $ajavahemikaastastErr;?></span>
     <br><br>
-    Asukoht:<input type="text" name="asukoht" value="<?php echo $asukoht;?>">
-    <span class="error">* <?php echo $asukohtErr;?></span>
-    <br><br>
-    <h2>Kirjutage endast lähemalt</h2>
-    <p> Tutvustage end lühidalt. Võite kirjutada oma elukäigust, kogemustest, hobidest, tugevustest ja nõrkustest, eesmärkidest. </p>
-    <input type="text" name="muu" value="<?php echo $muu;?>">
-    <span class="error">* <?php echo $muuErr;?></span>
-    <br><br>
-    <p> Missugusest praktikast olete huvitatud? </p>
-    <input type="text" name="huvitavud" value="<?php echo $huvitavud;?>">
-    <span class="error">* <?php echo $huvitavudErr;?></span>
+    Kuni aastani: <input type="text" name="kuniaastani" value="<?php echo $kuniaastani;?>">
+    <span class="error">* <?php echo $kuniaastaniErr;?></span>
+   <br><br>
+   Asukoht:<input type="text" name="asukoht" value="<?php echo $asukoht;?>">
+   <span class="error">* <?php echo $asukohtErr;?></span>
+   <br><br>
+   <h2>Kirjutage endast lähemalt</h2>
+   <p> Tutvustage end lühidalt. Võite kirjutada oma elukäigust, kogemustest, hobidest, tugevustest ja nõrkustest, eesmärkidest. </p>
+   <input type="text" name="muu" value="<?php echo $muu;?>">
+   <span class="error">* <?php echo $muuErr;?></span>
+   <br><br>
+   <p> Missugusest praktikast olete huvitatud? </p>
+   <input type="text" name="huvitavud" value="<?php echo $huvitavud;?>">
+   <span class="error">* <?php echo $huvitavudErr;?></span>
     <br><br>
     <input type="submit" name="submit" value="Registreeru">
   </form>
@@ -184,15 +176,15 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
   echo "<br>";
   echo $ametikohanimi;
   echo "<br>";
-  echo $ajavahemikaastast
+  echo $ajavahemikaastast;
   echo "<br>";
-  echo $kuniaastani
+  echo $kuniaastani;
   echo "<br>";
-  echo $asukoht
+  echo $asukoht;
   echo "<br>";
-  echo $muu
+  echo $muu;
   echo "<br>";
-  echo $huvitavud
+  echo $huvitavud;
   echo "<br>";
   ?>
 
