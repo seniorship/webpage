@@ -25,7 +25,7 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
 <p>Väljade täitmine võtab umbes 10 minutit. <p>
 
 <h2>Pakkumise kirjeldus</h2>
-<form action="/action_page.php">
+<form action="praktikanti.php">
   Pealkiri:<br>
   <input type="text" name="Pealkiri">
   <br>
