@@ -30,7 +30,7 @@
     </th>
  </tr>
  <tr>
-  <th><h3>LEIA PRAKTIKA</h3> <div align="center" style="width:20px; height:2px;border:1px solid #000;"></div></th>
+  <th><h3>LEIA PRAKTIKA</h3> <div align="center" style="width:10px; height:2px;border:1px solid #000;"></div></th>
    <th><h3>KANDIDEERI</h3></th>
    <th><h3>TÖÖTA</h3></th>
    <th><h3>TEENI RAHA</h3></th>
