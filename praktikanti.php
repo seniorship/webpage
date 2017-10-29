@@ -4,13 +4,18 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <title>Vanaematöö</title>
- </head>
+<link rel="stylesheet"
+type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" type="text/css" href="style.css"> </head>
   <body>
 
-<p><a href="pakkumised.php">pakkumised</a></p>
-<p><a href="firmale.php">firmale</a></p>
-<p><a href="praktikandile.php">praktikandile</a></p>
-<p><a href="liitu.php">liitu</a></p>
-
+    <ul>
+      <li style="background-color:#46cdc4"><a href="liitu.php">Liitu</a></li>
+    <li><a href="praktikandile.php">Praktikandile</a></li>
+    <li><a href="firmale.php">Firmale</a></li>
+    <li><a href="index.php">Pakkumised</a></li>
+    <li style="float:left">Seniorship</li>
+    </ul>
+    
 </body>
 </html>

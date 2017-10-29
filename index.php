@@ -9,11 +9,11 @@
  </head>
 <body>
 <ul>
-  <li style="background-color:#46cdc4"><a href="liitu.html">Liitu</a></li>
-<li><a href="praktikandile.html">Praktikandile</a></li>
-<li><a href="firmale.html">Firmale</a></li>
-<li><a href="index.html">Pakkumised</a></li>
-<li style="float:left">Seniorship</li>
+  <li style="background-color:#46cdc4"><a href="liitu.php">Liitu</a></li>
+<li><a href="praktikandile.php">Praktikandile</a></li>
+<li><a href="firmale.php">Firmale</a></li>
+<li><a href="index.php">Pakkumised</a></li>
+<li style="float:left"><img src="logo.png" alt="Seniorship" style="height:100px;"></li>
 </ul>
 
  <h1>Kuidas see toimib?</h1>

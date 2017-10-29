@@ -2,23 +2,29 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title>Vanaematöö</title>
+<title>Seniorship</title>
 </head>
+<link rel="stylesheet"
+type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
+<link rel="stylesheet" type="text/css" href="style.css">
+ </head>
 <body>
-
-<p><a href="pakkumised.php">pakkumised</a></p>
-<p><a href="firmale.php">firmale</a></p>
-<p><a href="praktikandile.php">praktikandile</a></p>
-<p><a href="liitu.php">liitu</a></p>
+<ul>
+  <li style="background-color:#46cdc4"><a href="liitu.php">Liitu</a></li>
+<li><a href="praktikandile.php">Praktikandile</a></li>
+<li><a href="firmale.php">Firmale</a></li>
+<li><a href="index.php">Pakkumised</a></li>
+<li style="float:left">Seniorship</li>
+</ul>
 
 <h1>Tere tulemast!</h1>
-<p> Registreerumiseks täidke palun ära järgnevad väljad enda kontaktinfo, töökogemuste ja hariduskäigu kohta.
-Hoiame Teie informatisooni täielikult konfidentsiaalsena ja jagame seda praktikapakkujaga ainult siis, kui Sa oma kandidatuuri ise esitad.</p>
-
-<p>Väljade täitmine võtab umbes 10 minutit. Et praktikapakkujale võimalikult head muljet jätta, möelge kõik vastused põhjalikult läbi. Vastamise lihtustamiseks on küsimuse kõrval hallis kirjas näide sobilikust vastusest.</p>
+<p> Registreerumiseks täidke palun ära järgnevad väljad enda kontaktinfo, töökogemuste ja hariduskäigu kohta. </p>
+<p>Hoiame Teie informatisooni täielikult konfidentsiaalsena ja jagame seda praktikapakkujaga ainult siis, kui Sa oma kandidatuuri ise esitad.
+</p>
+<p>Väljade täitmine võtab umbes 10 minutit. <p><Et praktikapakkujale võimalikult head muljet jätta, möelge kõik vastused põhjalikult läbi.</p><p> Vastamise lihtustamiseks on küsimuse kõrval hallis kirjas näide sobilikust vastusest.</p>
 
 <h2>Kontaktinfo</h2>
-<form id="kontakt" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<form action="/action_page.php">
   Nimi:<br>
   <input type="text" name="nimi">
   <br>
@@ -97,68 +103,6 @@ Hoiame Teie informatisooni täielikult konfidentsiaalsena ja jagame seda praktik
 </br>
   <input type="submit" name="formsubmit" value="Registreeru"/>
   </form>
-
-
-  <script>
-   document.getElementById("kontakt").onsubmit = function()
-   {myFunction()};
-  </script>
-
-  <?php
-  // create table if needed
-   $servername = "localhost";
-   $username = "dbuser";
-   $password = "dbpasswd";
-   $dbname = "praktikant";
-  try {
-      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-      // set the PDO error mode to exception
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      echo "Connected successfully <br>";
-      $conn = null;
-      }
-  catch(PDOException $e)
-      {
-      echo "Connection failed: " . $e->getMessage();
-      }
-  // Create table
-  try {
-      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-      // set the PDO error mode to exception
-      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      // sql to create table of interns
-      $sql = "CREATE TABLE IF NOT EXISTS interns (
-      id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      name VARCHAR(30) NOT NULL,
-      elukoht VARCHAR(30) NOT NULL,
-      linn VARCHAR(30) NOT NULL,
-      telefoninumber INT(30) NOT NULL,
-
-      ametikoha VARCHAR(30) NOT NULL,
-      ajavahemik VARCHAR(30) NOT NULL,
-      kuniaastani VARCHAR(30) NOT NULL,
-      asukoht VARCHAR(30) NOT NULL,
-      message VARCHAR(500) NOT NULL,
-      comment VARCHAR(500) NOT NULL,
-      reg_date TIMESTAMP
-      )";
-      // use exec() because no results are returned
-      $conn->exec($sql);
-      echo "intern table created <br>";
-      $sql = $conn->prepare("INSERT INTO interns (name) VALUES ( '" . $name . "')");
-      $sql->execute();
-      $id = $conn->lastInsertId();
-      echo "Username entered in table successfully and user id is " $id "". "<br>";
-      $conn = null;
-      // return to main page
-      header("Location:http://ip.address/index.php");
-      }
-  catch(PDOException $e)
-      {
-      echo $sql . "<br>" . $e->getMessage();
-      }
-  }
-  ?>
 
 </body>
 </html>
