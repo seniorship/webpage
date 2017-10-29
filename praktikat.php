@@ -22,10 +22,8 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
   // define variables and set to empty values
 
   $nimiErr = $elukohtErr = $linnkulaErr =  $telefoninumberErr = $valdkondErr = $ametikohanimiErr =  "";
-  $ajavahemikaastastErr = $ajavahemikaastastErr = $kuniaastaniErr = $asukohtErr = "";
   $nimi = $elukoht = $linnkula =  $telefoninumber = $valdkond = $ametikohanimi =  "";
-  $ajavahemikaastast = $ajavahemikaastast = $kuniaastani = $asukoht = "";
-
+  
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["nimi"])) {
       $nimiErr = "Nimi on vajalik";
@@ -42,24 +40,23 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
              } else {
                $linnkula = test_input($_POST["linnkula"]);
              }
-            if (empty($_POST["telefoninumber"])) {
-                                       $telefoninumberErr = "Telefoninumber on vajalik";
-                             } else {
-                                       $telefoninumber = test_input($_POST["telefoninumber"]);
-                             }
+    if (empty($_POST["telefoninumber"])) {
+               $telefoninumberErr = "Telefoninumber on vajalik";
+            } else {
+                $telefoninumber = test_input($_POST["telefoninumber"]);
+            }
 
-                                     if (empty($_POST["valdkond"])) {
-                                               $valdkondErr = "Valdkond on vajalik";
-                                     } else {
-                                               $valdkond = test_input($_POST["valdkond"]);
-                                     }
+    if (empty($_POST["valdkond"])) {
+              $valdkondErr = "Valdkond on vajalik";
+          } else {
+              $valdkond = test_input($_POST["valdkond"]);
+          }
 
-                                             if (empty($_POST["ametikohanimi"])) {
-                                                       $ametikohanimiErr = "Ametikoha nimi on vajalik";
-                                             } else {
-                                                       $ametikohanimi = test_input($_POST["ametikohanimi"]);
-                                             }
-
+    if (empty($_POST["ametikohanimi"])) {
+              $ametikohanimiErr = "Ametikoha nimi on vajalik";
+          } else {
+              $ametikohanimi = test_input($_POST["ametikohanimi"]);
+          }
       }
 
   function test_input($data) {
@@ -91,7 +88,7 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
 
   <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     Nimi: <input type="text" name="nimi" value="<?php echo $nimi;?>">
-    <span class="error">* <?php echo $nameErr;?></span>
+    <span class="error">* <?php echo $nimiErr;?></span>
     <br><br>
     Elukoht:<br>
     <select name="elukoht" size="15">
@@ -152,6 +149,24 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
      Ametikoha nimi: <input type="text" name="ametikohanimi" value="<?php echo $ametikohanimi;?>">
      <span class="error">* <?php echo $ametikohanimiErr;?></span>
     <br><br>
+     Ajavahemik aastast: <input type="text" name="ajavahemikaastast" value="<?php echo $ajavahemikaastast;?>">
+     <span class="error">* <?php echo $ajavahemikaastastErr;?></span>
+     <br><br>
+     Kuni aastani: <input type="text" name="kuniaastani" value="<?php echo $kuniaastani;?>">
+     <span class="error">* <?php echo $kuniaastaniErr;?></span>
+    <br><br>
+    Asukoht:<input type="text" name="asukoht" value="<?php echo $asukoht;?>">
+    <span class="error">* <?php echo $asukohtErr;?></span>
+    <br><br>
+    <h2>Kirjutage endast lähemalt</h2>
+    <p> Tutvustage end lühidalt. Võite kirjutada oma elukäigust, kogemustest, hobidest, tugevustest ja nõrkustest, eesmärkidest. </p>
+    <input type="text" name="muu" value="<?php echo $muu;?>">
+    <span class="error">* <?php echo $muuErr;?></span>
+    <br><br>
+    <p> Missugusest praktikast olete huvitatud? </p>
+    <input type="text" name="huvitavud" value="<?php echo $huvitavud;?>">
+    <span class="error">* <?php echo $huvitavudErr;?></span>
+    <br><br>
     <input type="submit" name="submit" value="Registreeru">
   </form>
 
@@ -168,6 +183,16 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
   echo $valdkond;
   echo "<br>";
   echo $ametikohanimi;
+  echo "<br>";
+  echo $ajavahemikaastast
+  echo "<br>";
+  echo $kuniaastani
+  echo "<br>";
+  echo $asukoht
+  echo "<br>";
+  echo $muu
+  echo "<br>";
+  echo $huvitavud
   echo "<br>";
   ?>
 

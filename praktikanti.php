@@ -30,27 +30,25 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
       }
       if (empty($_POST["tootasu"])) {
              $tootasuErr = "tootasu on vajalik";
-           } else {
+      } else {
              $tootasu = test_input($_POST["tootasu"]);
-           }
+      }
       if (empty($_POST["praktikapikkus"])) {
                  $praktikapikkusErr = "Praktika pikkus on vajalik";
-               } else {
+      } else {
                  $praktikapikkus = test_input($_POST["praktikapikkus"]);
-               }
+      }
       if (empty($_POST["telefoninumber"])) {
-                                         $telefoninumberErr = "Telefoninumber on vajalik";
-                               } else {
-                                         $telefoninumber = test_input($_POST["telefoninumber"]);
-                               }
-
+          $telefoninumberErr = "Telefoninumber on vajalik";
+      } else {
+          $telefoninumber = test_input($_POST["telefoninumber"]);
+      }
       if (empty($_POST["asukoht"])) {
-                              $asukohtErr = "Asukoht on vajalik";
-                    } else {
-                              $asukoht = test_input($_POST["asukoht"]);
-                    }
-
-        }
+          $asukohtErr = "Asukoht on vajalik";
+      } else {
+          $asukoht = test_input($_POST["asukoht"]);
+      }
+    }
 
     function test_input($data) {
       $data = trim($data);
@@ -106,6 +104,7 @@ type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
     <option value="Võrumaa">Võrumaa</option>
   </select>
 </br>
+
   <input type="submit" name="formsubmit" value="Registreeru"/>
 
   </form>
